@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/addresses/normalize', 'AddressController@normalize')->name('addresses.normalize');
+Route::post('/addresses', 'AddressController@store')->name('addresses.store');
